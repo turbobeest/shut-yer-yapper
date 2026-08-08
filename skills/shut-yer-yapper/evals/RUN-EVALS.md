@@ -47,10 +47,28 @@ Run these checks first. Do not start the cases until all four pass.
    `ls ~/.claude/commands/style.md`
 3. Confirm this is a **fresh session**. The skill must not already be active.
    If `/style` reports an active style, start a new session.
-4. Confirm no output-style hook is forcing a different voice. Check
-   `~/.claude/settings.json` for a `SessionStart` hook and for an
-   `outputStyle` setting. If either forces a voice, note it in the results and
-   continue. Do not edit settings.
+4. **Confirm no competing output style is active.** This is the precondition that
+   invalidates a run silently, so check all three places:
+
+   ```bash
+   python3 -c "
+   import json,os
+   d=json.load(open(os.path.expanduser('~/.claude/settings.json')))
+   print('outputStyle:', d.get('outputStyle','(none)'))
+   print('style plugins:', [k for k in d.get('enabledPlugins',{})
+                            if 'style' in k or 'output' in k])
+   "
+   ls ~/.claude/output-styles/ 2>/dev/null
+   ```
+
+   A known conflict on this machine: **`explanatory-output-style@claude-plugins-official`**
+   is enabled globally. It instructs the model to add educational insight blocks
+   and says *"you may exceed typical length constraints"* — the direct opposite
+   of this skill. With it active, every case fails the brevity axis for a reason
+   unrelated to the router, and the run tells you nothing.
+
+   Ask the user to disable it with `/plugin` before running, or run anyway and
+   mark the whole results file `CONFOUNDED`. **Do not edit settings yourself.**
 
 If a precondition fails, stop and report which one. Do not work around it.
 

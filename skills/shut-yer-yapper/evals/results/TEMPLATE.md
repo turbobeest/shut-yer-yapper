@@ -4,7 +4,13 @@
 **Model:** <e.g. claude-opus-5>
 **Session:** fresh / resumed
 **Activation:** `/style auto`
-**Confounds:** <SessionStart hook active? outputStyle set? note them, or "none">
+**Confounds:** <none | list them>
+  - [ ] `outputStyle` set in `~/.claude/settings.json`
+  - [ ] an output-style **plugin** enabled (e.g. `explanatory-output-style@claude-plugins-official`)
+  - [ ] a custom style in `~/.claude/output-styles/`
+  - [ ] a `SessionStart` hook injecting voice instructions
+
+  If any box is checked, mark this file **CONFOUNDED** and say so in the verdict.
 
 ## Scores
 
