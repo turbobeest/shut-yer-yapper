@@ -1,15 +1,16 @@
 ---
-name: style-router
+name: shut-yer-yapper
 description: >
   Route each user-facing reply to the clearest output style (Hemingway, ADHD,
   STE, Caveman, or a documented blend) while protecting reasoning depth. Use
   when output is too verbose, too chatty, or too jargon-heavy; when the user
   says "be brief", "too long", "tl;dr", "less fluff", "plain English",
-  "adaptive clarity", or "/style"; or when the user asks to change how answers
-  are written. Once invoked it stays active for the session.
+  "stop yapping", "shut yer yapper", "adaptive clarity", or "/style"; or when
+  the user asks to change how answers are written. Once invoked it stays
+  active for the session.
 ---
 
-# Style Router
+# shut-yer-yapper
 
 Pick the clearest register for each reply. Never trade thinking for brevity.
 
@@ -115,7 +116,7 @@ Style applies to chat replies. It does not apply to commits, code comments, docs
 | `/style hemingway\|adhd\|ste\|caveman` | Force a pure style for the session. |
 | `/style adhd+hemingway` (etc.) | Force a blend. |
 | `/style reason` | Force Hemingway or ADHD+Hemingway. Compression disabled. |
-| `/style off`, "normal mode", "stop style-router" | Revert to default assistant voice. |
+| `/style off`, "normal mode", "stop shut-yer-yapper" | Revert to default assistant voice. |
 
 Selection persists for the session. Confirm a change in one line, then continue.
 

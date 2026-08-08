@@ -3,7 +3,7 @@ description: Set the output style for this session (auto, hemingway, adhd, ste, 
 argument-hint: "[auto|hemingway|adhd|ste|caveman|adhd+hemingway|hemingway+ste|ste+adhd|reason|off]"
 ---
 
-Set the session output style using the `style-router` skill.
+Set the session output style using the `shut-yer-yapper` skill.
 
 Requested style: **$ARGUMENTS**
 

@@ -9,7 +9,7 @@ Written in STE + ADHD, which is the style this router selects for a procedure.
 
 ## 0. Context
 
-`style-router` is a Claude Code skill at `~/.claude/skills/style-router/`. It
+`shut-yer-yapper` is a Claude Code skill at `~/.claude/skills/shut-yer-yapper/`. It
 routes each reply to one of four output styles while protecting reasoning depth.
 It was authored on 2026-08-07 and has **never been executed**. This runbook is
 its first live test.
@@ -28,7 +28,7 @@ Design rationale, source repos, and the eight documented style conflicts are in
 Run these checks first. Do not start the cases until all four pass.
 
 1. Confirm the skill is installed:
-   `ls ~/.claude/skills/style-router/SKILL.md`
+   `ls ~/.claude/skills/shut-yer-yapper/SKILL.md`
 2. Confirm the command is installed:
    `ls ~/.claude/commands/style.md`
 3. Confirm this is a **fresh session**. The skill must not already be active.
@@ -169,7 +169,7 @@ and E6 as a regression check. Then sync the installed copy:
 From the repo root:
 
 ```bash
-rsync -a --delete skills/style-router/ ~/.claude/skills/style-router/
+rsync -a --delete skills/shut-yer-yapper/ ~/.claude/skills/shut-yer-yapper/
 cp commands/style.md ~/.claude/commands/style.md
 ```
 

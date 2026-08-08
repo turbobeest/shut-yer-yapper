@@ -1,14 +1,13 @@
-# style-router
+# shut-yer-yapper — skill internals
 
-The skill that powers [shut-yer-yapper](../../README.md).
-
-Full pitch, install instructions, and before/after examples are in the
-[repo README](../../README.md). This file is the map of what's in this directory.
+The pitch, install instructions, and before/after examples live in the
+[repo README](../../README.md). This file is the map of what is in this
+directory, and the rules for changing it.
 
 ## Files
 
 ```
-skills/style-router/
+skills/shut-yer-yapper/
 ├── SKILL.md                              # Router logic, the invariant, decision process.
 │                                         # Inlines the Hemingway core so the default
 │                                         # path never reads a second file. ~1.7k tokens.
@@ -63,7 +62,7 @@ to this router:
 Then sync your installed copy from the repo root:
 
 ```bash
-rsync -a --delete skills/style-router/ ~/.claude/skills/style-router/
+rsync -a --delete skills/shut-yer-yapper/ ~/.claude/skills/shut-yer-yapper/
 ```
 
 Restart Claude Code for skill changes to take effect.

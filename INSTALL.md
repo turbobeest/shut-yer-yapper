@@ -10,7 +10,7 @@ Available in every project.
 ```bash
 git clone https://github.com/turbobeest/shut-yer-yapper.git
 cd shut-yer-yapper
-cp -r skills/style-router ~/.claude/skills/style-router
+cp -r skills/shut-yer-yapper ~/.claude/skills/shut-yer-yapper
 mkdir -p ~/.claude/commands && cp commands/style.md ~/.claude/commands/style.md
 ```
 
@@ -19,7 +19,7 @@ Restart Claude Code, then run `/style auto`.
 Verify with `/doctor`, or just check the files landed:
 
 ```bash
-ls ~/.claude/skills/style-router/SKILL.md ~/.claude/commands/style.md
+ls ~/.claude/skills/shut-yer-yapper/SKILL.md ~/.claude/commands/style.md
 ```
 
 ## Project-level
@@ -28,13 +28,13 @@ Scoped to one repo, and committable so your team shares it.
 
 ```bash
 mkdir -p .claude/skills .claude/commands
-cp -r skills/style-router .claude/skills/style-router
+cp -r skills/shut-yer-yapper .claude/skills/shut-yer-yapper
 cp commands/style.md .claude/commands/style.md
 ```
 
 ## As a plugin
 
-The layout already matches the marketplace convention. Drop `skills/style-router`
+The layout already matches the marketplace convention. Drop `skills/shut-yer-yapper`
 into a plugin's `skills/` and `commands/style.md` into its `commands/`.
 
 ## Always-on
@@ -52,7 +52,7 @@ session, add a `SessionStart` hook to `~/.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'Use the style-router skill for all user-facing replies this session. Default to Hemingway. The Reasoning Sanctity Invariant applies: style shapes prose, never thought.'"
+            "command": "echo 'Use the shut-yer-yapper skill for all user-facing replies this session. Default to Hemingway. The Reasoning Sanctity Invariant applies: style shapes prose, never thought.'"
           }
         ]
       }
@@ -69,7 +69,7 @@ If you already have a `SessionStart` array, append to it rather than replacing i
 ## Uninstall
 
 ```bash
-rm -rf ~/.claude/skills/style-router ~/.claude/commands/style.md
+rm -rf ~/.claude/skills/shut-yer-yapper ~/.claude/commands/style.md
 ```
 
 Or just say "normal mode" to turn it off for the current session without removing

@@ -59,10 +59,10 @@ one permanent voice.
 
 | Style | Good at | Where it hurts you |
 |---|---|---|
-| [Hemingway](skills/style-router/styles/hemingway.md) | Everything with a "because" in it | — (this is the default) |
-| [ADHD](skills/style-router/styles/adhd.md) | Action-first structure, ordered steps | Caps lists at 5 — bad when you have 8 findings |
-| [STE](skills/style-router/styles/ste.md) | Unambiguous procedures, agent handoffs | Turns "might" into "can" — fabricates confidence |
-| [Caveman](skills/style-router/styles/caveman.md) | Status lines, confirmations | Deletes trade-offs. Gated behind an eligibility check. |
+| [Hemingway](skills/shut-yer-yapper/styles/hemingway.md) | Everything with a "because" in it | — (this is the default) |
+| [ADHD](skills/shut-yer-yapper/styles/adhd.md) | Action-first structure, ordered steps | Caps lists at 5 — bad when you have 8 findings |
+| [STE](skills/shut-yer-yapper/styles/ste.md) | Unambiguous procedures, agent handoffs | Turns "might" into "can" — fabricates confidence |
+| [Caveman](skills/shut-yer-yapper/styles/caveman.md) | Status lines, confirmations | Deletes trade-offs. Gated behind an eligibility check. |
 
 Routing, first match wins:
 
@@ -81,7 +81,7 @@ however short it is.**
 ```bash
 git clone https://github.com/turbobeest/shut-yer-yapper.git
 cd shut-yer-yapper
-cp -r skills/style-router ~/.claude/skills/style-router
+cp -r skills/shut-yer-yapper ~/.claude/skills/shut-yer-yapper
 mkdir -p ~/.claude/commands && cp commands/style.md ~/.claude/commands/style.md
 ```
 
@@ -145,7 +145,7 @@ Plain English works too: *"be brief"*, *"too verbose"*, *"preserve reasoning"*,
 ## The conflicts nobody else resolved
 
 Merging four style skills is not concatenation. They contradict each other.
-[Eight documented conflicts](skills/style-router/references/research-notes.md),
+[Eight documented conflicts](skills/shut-yer-yapper/references/research-notes.md),
 three that matter:
 
 **C1 — Hard contradiction.** Caveman drops articles and allows fragments. STE
@@ -181,11 +181,11 @@ believe anyone's numbers, including these.
 ## Testing it
 
 Ten graded cases for whether reasoning actually survives:
-[`skills/style-router/evals/`](skills/style-router/evals/). Scored on five axes —
+[`skills/shut-yer-yapper/evals/`](skills/shut-yer-yapper/evals/). Scored on five axes —
 route, substance, uncertainty, verbatim, brevity. Pass requires all five.
 
 ```
-Read skills/style-router/evals/RUN-EVALS.md and follow it.
+Read skills/shut-yer-yapper/evals/RUN-EVALS.md and follow it.
 ```
 
 The two that matter most are **E4** (does "might" survive an STE route?) and
@@ -204,7 +204,7 @@ Also evaluated: [TheAngryByrd/simplified-technical-english-skill](https://github
 [nuelcyoung/asd-ste100](https://github.com/nuelcyoung/asd-ste100).
 
 Every source was read at a pinned commit;
-[SHAs are recorded](skills/style-router/references/research-notes.md).
+[SHAs are recorded](skills/shut-yer-yapper/references/research-notes.md).
 
 ASD-STE100 is a registered trademark of ASD. No approved dictionary is reproduced
 here — the official standard is a free download at
