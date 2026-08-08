@@ -21,6 +21,20 @@ that dropped a trade-off fails.
 Design rationale, source repos, and the eight documented style conflicts are in
 `references/research-notes.md`. Read it only if a result is surprising.
 
+**Provenance.** Source repo: https://github.com/turbobeest/shut-yer-yapper
+Working copy: `/Users/terbeest/dev/skills`. Record the commit you tested against:
+
+```bash
+git -C /Users/terbeest/dev/skills log --oneline -1
+```
+
+Confirm the installed copy matches the working copy before you start. If it does
+not, the results describe a version that is not in the repo:
+
+```bash
+diff -rq /Users/terbeest/dev/skills/skills/shut-yer-yapper ~/.claude/skills/shut-yer-yapper
+```
+
 ---
 
 ## 1. Preconditions
